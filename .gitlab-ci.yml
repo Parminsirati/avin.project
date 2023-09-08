@@ -1,7 +1,7 @@
 stages:
-    - test
+    - copy
 
-testing:
-    stage: test
+copy_files:
+    stage: copy
     script:
-        echo "hi"
+        - cp $CI_PROJECT_DIR/* /home/ahsp/docker-compose.d/nginx/nginx/html/
